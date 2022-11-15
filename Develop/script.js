@@ -1,5 +1,14 @@
 // Assignment code here
 
+const lowerLetters = 'abcdefghijklmnopqrstuvwxyz';
+const upperLetters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+const numbers = '123456789';
+const specialChars = ' !"#$%&\'()*+,-./:;<=>?@[\\]^_\`{|}~';
+
+var charSet = lowerLetters + upperLetters + numbers + specialChars;
+
+console.log(charSet);
+
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
