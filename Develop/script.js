@@ -7,7 +7,24 @@ const specialChars = ' !"#$%&\'()*+,-./:;<=>?@[\\]^_\`{|}~';
 
 var charSet = lowerLetters + upperLetters + numbers + specialChars;
 
-console.log(charSet);
+function randomIntWithin(min, max) {
+  return Math.floor(Math.random() * (max-min + 1) + min)
+}
+
+var minChars = 8;
+var maxChars = 50;
+
+var password = '';
+
+var i = randomIntWithin(minChars, maxChars);
+
+while(i > 0) {
+  password += charSet[Math.floor(Math.random() * charSet.length)];
+  i--;
+}
+
+console.log(password);
+
 
 
 // Get references to the #generate element
