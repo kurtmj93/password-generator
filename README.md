@@ -2,17 +2,15 @@
 
 ## Deployed Link
 
-N/A
+[Kurtmj93 | Password Generator] (https://kurtmj93.github.io/password-generator/)
 
 ## Screenshots
 
-Coming Soon
-
-### 
+![Password Generator Showing Prompt](./assets/screen-prompt.png "Password Generator Showing Prompt")
 
 ## Description
 
-Submission for University of Richmond bootcamp Module 3 Challenge - developing a password generator using Javascript.
+Submission for University of Richmond bootcamp Module 3 Challenge - developing a password generator using Javascript. Character types and length requested via browser prompt. Includes optional random password length roll, not required by acceptance criteria.
 
 ## User Story
 
