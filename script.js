@@ -7,12 +7,6 @@ const upperLetters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 const numbers = '123456789';
 const specialChars = ' !"#$%&\'()*+,-./:;<=>?@[\\]^_\`{|}~';
 
-// Random integer between two numbers function, for random length of password - this was not required by acceptance criteria, but I like it.
-
-function randomIntWithin(min, max) {
-  return Math.floor(Math.random() * (max-min + 1) + min)
-}
-
 // Min/max characters are detailed in acceptance criteria
 
 var minChars = 8;
@@ -22,6 +16,9 @@ function generatePassword() {
   // charSet is the string we'll be choosing random letters from - it starts with lowerLetters included.
   let charSet = lowerLetters;
   let password = '';
+  
+  // series of browser prompts asks for yes/no then password length inputs
+
   let uppersOK = confirm('Do you want to include uppercase letters?');
   if (uppersOK) {
     charSet += upperLetters;
@@ -42,19 +39,8 @@ function generatePassword() {
   }
 //  console.log(charSet); // checking to see if charSet worked as intended - commented out
 
-// not required by acceptance criteria - see comment on randomIntWithin function, above
-  let randomOK = confirm('Would you like a password of random length between 8 and 128 characters?')
-  if (randomOK) {
-    let i = randomIntWithin(minChars, maxChars);
-    // while loop chooses a random letter from the charSet string i number of times
-    while (i > 0) {
-      password += charSet[Math.floor(Math.random() * charSet.length)];
-      i--;
-    }
-    return password;
-  } else {
-    // prompt asks for an explicit password length.
-    let i = prompt("How long would you like your password to be?", 8);
+  // prompt asks for an explicit password length.
+  let i = prompt("How long would you like your password to be?", 8);
     if (i > 7 && i < 129) {
       while (i > 0) {
         password += charSet[Math.floor(Math.random() * charSet.length)];
@@ -69,7 +55,6 @@ function generatePassword() {
         password = 'Please try again.';
         return password;
       }
-  }
 }
 
 
